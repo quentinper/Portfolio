@@ -1,0 +1,207 @@
+﻿Type,Adresse,PerimetreKm
+red,"10 rue de la Paix, 75002 Paris",5
+green,"1 place du Commerce, 44000 Nantes",8
+orange,"5 rue de Siam, 29200 Brest",10
+blue,"22 rue Saint-Malo, 35000 Rennes",7
+green,"10 avenue des Closbilles",0
+blue,"26 rue Nationale, 34000 Montpellier",2
+blue,"11 rue des Jardins, 76000 Rouen",11
+red,"34 rue Nationale, 31000 Toulouse",7
+green,"29 rue du Général Leclerc, 64000 Pau",5
+orange,"29 rue du Port, 31000 Toulouse",3
+blue,"10 rue du Port, 35000 Rennes",1
+orange,"2 rue des Jardins, 33000 Bordeaux",12
+green,"28 rue de la Liberté, 21000 Dijon",12
+red,"4 rue Nationale, 13001 Marseille",1
+orange,"13 rue Saint-Pierre, 69002 Lyon",1
+blue,"22 place Gambetta, 37000 Tours",4
+orange,"20 rue Pasteur, 33000 Bordeaux",5
+red,"2 rue de la République, 59000 Lille",7
+blue,"13 rue Lafayette, 14000 Caen",8
+red,"11 rue du Port, 44000 Nantes",1
+orange,"28 rue des Jardins, 06000 Nice",1
+orange,"37 rue de la Liberté, 67000 Strasbourg",7
+green,"10 rue Pasteur, 34000 Montpellier",3
+orange,"30 rue Nationale, 31000 Toulouse",12
+red,"1 rue Victor Hugo, 31000 Toulouse",3
+blue,"32 rue des Jardins, 59000 Lille",4
+green,"40 avenue Foch, 64000 Pau",6
+orange,"11 rue du Château, 21000 Dijon",9
+orange,"28 rue Saint-Pierre, 49000 Angers",7
+orange,"28 rue du Château, 35000 Rennes",7
+green,"37 rue du Général Leclerc, 21000 Dijon",10
+green,"3 rue des Jardins, 44000 Nantes",7
+red,"18 rue Victor Hugo, 38000 Grenoble",5
+red,"16 avenue Foch, 13001 Marseille",10
+green,"30 rue du Château, 34000 Montpellier",7
+green,"29 avenue Jean Jaurès, 14000 Caen",11
+orange,"26 rue des Acacias, 37000 Tours",1
+green,"29 rue de la République, 38000 Grenoble",8
+orange,"9 rue Victor Hugo, 34000 Montpellier",4
+red,"20 rue du Port, 44000 Nantes",5
+green,"7 avenue Jean Jaurès, 84000 Avignon",12
+red,"27 avenue Foch, 14000 Caen",7
+red,"7 rue Saint-Pierre, 06000 Nice",12
+green,"24 rue Nationale, 59000 Lille",10
+green,"36 rue de la Liberté, 31000 Toulouse",3
+red,"7 boulevard Carnot, 44000 Nantes",10
+orange,"1 rue Saint-Pierre, 59000 Lille",4
+green,"30 rue du Port, 31000 Toulouse",7
+red,"24 rue de la République, 38000 Grenoble",3
+red,"34 rue Pasteur, 06000 Nice",6
+red,"17 avenue Foch, 14000 Caen",2
+orange,"31 avenue Jean Jaurès, 33000 Bordeaux",2
+green,"10 rue des Acacias, 69002 Lyon",7
+orange,"5 rue du Château, 67000 Strasbourg",2
+blue,"24 rue des Acacias, 34000 Montpellier",0
+green,"29 rue des Jardins, 67000 Strasbourg",6
+blue,"8 rue des Jardins, 76000 Rouen",11
+green,"34 rue du Port, 31000 Toulouse",5
+blue,"9 rue Victor Hugo, 13001 Marseille",1
+orange,"18 boulevard Carnot, 13001 Marseille",1
+blue,"28 boulevard Carnot, 57000 Metz",6
+green,"12 rue de la Liberté, 14000 Caen",0
+green,"8 rue de la République, 76000 Rouen",12
+blue,"34 rue Lafayette, 13001 Marseille",7
+red,"23 avenue Jean Jaurès, 38000 Grenoble",1
+blue,"4 place Gambetta, 64000 Pau",2
+blue,"28 rue Saint-Pierre, 67000 Strasbourg",4
+blue,"33 rue Pasteur, 44000 Nantes",2
+orange,"25 rue Nationale, 34000 Montpellier",3
+red,"14 rue Pasteur, 06000 Nice",1
+red,"34 rue des Acacias, 84000 Avignon",3
+blue,"31 rue des Jardins, 67000 Strasbourg",2
+red,"29 rue du Général Leclerc, 57000 Metz",8
+green,"9 avenue Jean Jaurès, 59000 Lille",8
+red,"24 avenue Jean Jaurès, 34000 Montpellier",0
+red,"36 place Gambetta, 63000 Clermont-Ferrand",4
+orange,"26 rue des Acacias, 31000 Toulouse",8
+red,"6 place Gambetta, 21000 Dijon",8
+red,"12 rue des Acacias, 44000 Nantes",11
+red,"6 boulevard Carnot, 35000 Rennes",8
+orange,"34 rue des Acacias, 06000 Nice",11
+orange,"35 rue Nationale, 13001 Marseille",9
+red,"5 rue des Acacias, 33000 Bordeaux",11
+blue,"30 rue Lafayette, 69002 Lyon",10
+green,"32 rue Saint-Pierre, 34000 Montpellier",12
+blue,"36 rue Nationale, 31000 Toulouse",9
+green,"27 rue des Jardins, 84000 Avignon",5
+blue,"40 rue des Acacias, 59000 Lille",2
+red,"7 rue Pasteur, 63000 Clermont-Ferrand",11
+green,"16 rue des Jardins, 31000 Toulouse",1
+red,"3 boulevard Carnot, 38000 Grenoble",9
+green,"16 rue de la République, 76000 Rouen",8
+blue,"18 rue Nationale, 49000 Angers",2
+red,"30 rue Pasteur, 33000 Bordeaux",2
+green,"38 rue Pasteur, 64000 Pau",6
+orange,"32 rue Saint-Pierre, 13001 Marseille",9
+red,"21 rue Saint-Pierre, 63000 Clermont-Ferrand",8
+green,"18 place Gambetta, 06000 Nice",12
+green,"13 rue Pasteur, 67000 Strasbourg",4
+red,"17 rue Lafayette, 76000 Rouen",10
+orange,"26 rue des Jardins, 63000 Clermont-Ferrand",9
+orange,"10 rue du Général Leclerc, 67000 Strasbourg",6
+red,"9 rue Lafayette, 38000 Grenoble",7
+orange,"19 rue Lafayette, 49000 Angers",11
+red,"25 avenue Jean Jaurès, 06000 Nice",6
+orange,"33 rue des Acacias, 57000 Metz",0
+blue,"32 place Gambetta, 49000 Angers",5
+blue,"24 rue Victor Hugo, 06000 Nice",6
+green,"30 rue du Port, 14000 Caen",8
+orange,"22 place Gambetta, 84000 Avignon",12
+blue,"12 place Gambetta, 67000 Strasbourg",2
+orange,"20 rue de la République, 13001 Marseille",9
+blue,"37 avenue Jean Jaurès, 57000 Metz",8
+blue,"10 rue des Acacias, 59000 Lille",5
+green,"36 place Gambetta, 31000 Toulouse",7
+red,"17 rue Nationale, 84000 Avignon",1
+green,"10 rue de la Liberté, 21000 Dijon",10
+orange,"2 rue Nationale, 13001 Marseille",12
+blue,"13 rue Lafayette, 35000 Rennes",2
+orange,"21 avenue Jean Jaurès, 64000 Pau",2
+green,"40 rue Pasteur, 57000 Metz",6
+green,"38 rue Nationale, 64000 Pau",5
+red,"39 rue de la République, 59000 Lille",6
+green,"20 avenue Jean Jaurès, 38000 Grenoble",12
+red,"10 rue des Acacias, 21000 Dijon",5
+orange,"2 rue de la Liberté, 63000 Clermont-Ferrand",8
+green,"35 rue de la République, 06000 Nice",9
+red,"34 avenue Jean Jaurès, 44000 Nantes",12
+orange,"38 rue des Acacias, 69002 Lyon",0
+green,"14 rue Lafayette, 21000 Dijon",6
+blue,"39 rue Victor Hugo, 84000 Avignon",9
+red,"37 rue Victor Hugo, 33000 Bordeaux",6
+orange,"3 rue de la Liberté, 57000 Metz",6
+blue,"15 rue du Port, 57000 Metz",7
+green,"24 place Gambetta, 44000 Nantes",0
+green,"6 rue du Général Leclerc, 59000 Lille",7
+blue,"6 rue des Acacias, 67000 Strasbourg",4
+red,"36 rue Victor Hugo, 57000 Metz",1
+orange,"24 rue Saint-Pierre, 76000 Rouen",12
+red,"26 rue Saint-Pierre, 06000 Nice",9
+orange,"34 rue des Jardins, 67000 Strasbourg",8
+blue,"17 rue de la Liberté, 31000 Toulouse",7
+green,"37 rue Lafayette, 76000 Rouen",3
+green,"38 rue du Port, 84000 Avignon",2
+orange,"20 avenue Foch, 35000 Rennes",0
+orange,"21 rue Victor Hugo, 13001 Marseille",3
+green,"39 rue de la Liberté, 76000 Rouen",1
+orange,"14 rue Saint-Pierre, 57000 Metz",2
+red,"1 avenue Jean Jaurès, 21000 Dijon",1
+blue,"35 rue Saint-Pierre, 44000 Nantes",3
+blue,"25 boulevard Carnot, 33000 Bordeaux",2
+blue,"12 rue Lafayette, 84000 Avignon",6
+red,"13 rue Victor Hugo, 34000 Montpellier",4
+orange,"34 rue du Château, 49000 Angers",4
+red,"2 rue Nationale, 37000 Tours",3
+green,"14 rue du Château, 76000 Rouen",11
+blue,"6 rue du Château, 76000 Rouen",1
+blue,"21 rue du Général Leclerc, 57000 Metz",5
+green,"32 rue du Général Leclerc, 13001 Marseille",2
+blue,"25 rue du Port, 57000 Metz",2
+red,"10 avenue Jean Jaurès, 49000 Angers",7
+green,"22 avenue Jean Jaurès, 67000 Strasbourg",7
+green,"7 boulevard Carnot, 14000 Caen",9
+orange,"9 rue du Général Leclerc, 35000 Rennes",6
+orange,"34 rue des Jardins, 35000 Rennes",2
+red,"12 rue des Acacias, 57000 Metz",5
+orange,"18 avenue Jean Jaurès, 31000 Toulouse",5
+red,"27 boulevard Carnot, 38000 Grenoble",9
+red,"2 rue de la République, 06000 Nice",1
+orange,"6 rue du Port, 63000 Clermont-Ferrand",5
+orange,"24 rue de la Liberté, 84000 Avignon",5
+red,"10 rue du Château, 69002 Lyon",7
+red,"14 avenue Jean Jaurès, 69002 Lyon",12
+red,"27 rue Lafayette, 33000 Bordeaux",8
+red,"29 rue Pasteur, 21000 Dijon",8
+red,"39 rue du Général Leclerc, 67000 Strasbourg",10
+red,"2 rue de la République, 63000 Clermont-Ferrand",11
+orange,"9 rue Pasteur, 31000 Toulouse",1
+orange,"1 rue des Jardins, 33000 Bordeaux",12
+green,"28 rue Lafayette, 37000 Tours",0
+green,"34 avenue Jean Jaurès, 37000 Tours",1
+blue,"7 boulevard Carnot, 57000 Metz",5
+green,"3 rue Saint-Pierre, 49000 Angers",6
+green,"9 rue Lafayette, 34000 Montpellier",9
+red,"28 rue du Château, 06000 Nice",12
+orange,"40 avenue Foch, 84000 Avignon",4
+blue,"21 rue de la République, 59000 Lille",7
+red,"7 avenue Jean Jaurès, 69002 Lyon",0
+green,"30 rue Lafayette, 76000 Rouen",1
+green,"31 boulevard Carnot, 57000 Metz",12
+red,"40 rue Lafayette, 31000 Toulouse",3
+green,"3 rue Saint-Pierre, 06000 Nice",9
+orange,"10 avenue Jean Jaurès, 49000 Angers",5
+orange,"38 rue des Acacias, 13001 Marseille",1
+green,"16 avenue Foch, 06000 Nice",4
+red,"14 rue de la République, 13001 Marseille",5
+orange,"29 avenue Foch, 14000 Caen",2
+red,"28 rue Nationale, 67000 Strasbourg",12
+green,"12 rue de la Liberté, 34000 Montpellier",10
+orange,"18 avenue Jean Jaurès, 59000 Lille",11
+green,"11 rue des Jardins, 49000 Angers",9
+orange,"12 boulevard Carnot, 21000 Dijon",5
+orange,"37 rue du Château, 35000 Rennes",10
+red,"36 rue Nationale, 49000 Angers",2
+orange,"2 rue du Château, 13001 Marseille",1
+

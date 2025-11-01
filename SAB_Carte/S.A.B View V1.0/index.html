@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carte interactive SAB </title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+
+    <div id="map"></div>
+    <script>
+        // Init carte
+        var map = L.map('map').setView([48.1, -2.9], 7);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Icônes
+        var redIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+            shadowUrl: 'https://unpkg.com/leaflet/dist/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        var blueIcon = new L.Icon({
+            iconUrl: 'https://unpkg.com/leaflet/dist/images/marker-icon.png',
+            shadowUrl: 'https://unpkg.com/leaflet/dist/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        // Fonctions de placement
+        async function addMarker(postalCode, city, radiusKm = 5) {
+            try {
+                const response = await fetch(`https://nominatim.openstreetmap.org/search?postalcode=${postalCode}&city=${city}&country=France&format=json`);
+                const data = await response.json();
+
+                if (data.length > 0) {
+                    const lat = parseFloat(data[0].lat);
+                    const lon = parseFloat(data[0].lon);
+
+                    L.marker([lat, lon], { icon: redIcon })
+                        .addTo(map)
+                        .bindPopup(`${city} (${postalCode}) - Périmètre ${radiusKm} km`);
+
+                    L.circle([lat, lon], {
+                        radius: radiusKm * 1000,
+                        color: "red",
+                        fillColor: "#f03",
+                        fillOpacity: 0.2
+                    }).addTo(map);
+                } else {
+                    console.warn(`Aucune donnée trouvée pour ${city} (${postalCode})`);
+                }
+            } catch (error) {
+                console.error(`Erreur fetch pour ${city} (${postalCode})`, error);
+            }
+        }
+
+        async function addBlueMarker(postalCode, city) {
+            try {
+                const response = await fetch(`https://nominatim.openstreetmap.org/search?postalcode=${postalCode}&city=${city}&country=France&format=json`);
+                const data = await response.json();
+
+                if (data.length > 0) {
+                    const lat = parseFloat(data[0].lat);
+                    const lon = parseFloat(data[0].lon);
+
+                    L.marker([lat, lon], { icon: blueIcon })
+                        .addTo(map)
+                        .bindPopup(`${city} (${postalCode})`);
+                } else {
+                    console.warn(`Aucune donnée trouvée pour ${city} (${postalCode})`);
+                }
+            } catch (error) {
+                console.error(`Erreur fetch pour ${city} (${postalCode})`, error);
+            }
+        }
+
+        // Lecture du CSV avec PapaParse
+        Papa.parse("donnees.csv", {
+            download: true,
+            header: true,
+            complete: function (results) {
+                const rows = results.data;
+
+                rows.forEach((row, index) => {
+                    setTimeout(() => {
+                        const type = row.Type?.toLowerCase();
+                        const codePostal = row.CodePostal;
+                        const commune = row.Commune;
+                        const perimetre = parseFloat(row.PerimetreKm) || 5;
+
+                        if (!codePostal || !commune || !type) {
+                            console.warn("Ligne incomplète ignorée :", row);
+                            return;
+                        }
+
+                        if (type === "rouge") {
+                            addMarker(codePostal, commune, perimetre);
+                        } else {
+                            addBlueMarker(codePostal, commune);
+                        }
+                    }, index * 1100); // tempo de 1100 ms entre chaque point
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

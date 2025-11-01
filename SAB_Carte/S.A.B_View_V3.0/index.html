@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carte interactive SAB</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div id="map"></div>
+    <script>
+        // Init carte
+        var map = L.map('map').setView([48.1, -2.9], 7);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Générateur d'icônes colorées
+        function getIcon(color = "blue") {
+            return new L.Icon({
+                iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-${color}.png`,
+                shadowUrl: 'https://unpkg.com/leaflet/dist/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+        }
+
+        // Fonction pour ajouter un marker depuis lat/lon
+        function addMarker(lat, lon, type, address, radiusKm = 0) {
+            const color = type.toLowerCase();
+            const icon = getIcon(color);
+
+            let popupContent = `<b>${address}</b>`;
+            if (radiusKm > 0) {
+                popupContent += `<br>Périmètre ${radiusKm} km`;
+            }
+
+            // Marker
+            L.marker([lat, lon], { icon })
+                .addTo(map)
+                .bindPopup(popupContent);
+
+            // Cercle
+            if (radiusKm > 0) {
+                L.circle([lat, lon], {
+                    radius: radiusKm * 1000,
+                    color: color,
+                    fillColor: color,
+                    fillOpacity: 0.2
+                }).addTo(map);
+            }
+        }
+
+        // Lecture du CSV avec PapaParse
+        Papa.parse("adresses_geo.csv", {
+            download: true,
+            header: true,
+            complete: function (results) {
+                const rows = results.data;
+
+                rows.forEach((row) => {
+                    const type = row.Type?.toLowerCase();
+                    const adresse = row.Adresse;
+                    const lat = parseFloat(row.lat);
+                    const lon = parseFloat(row.lon);
+                    const perimetre = parseFloat(row.PerimetreKm) || 0;
+
+                    if (!adresse || !type || !lat || !lon) {
+                        console.warn("Ligne incomplète ignorée :", row);
+                        return;
+                    }
+
+                    addMarker(lat, lon, type, adresse, perimetre);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
